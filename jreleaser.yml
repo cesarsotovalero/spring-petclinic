@@ -1,0 +1,29 @@
+project:
+  name: spring-petclinic
+  description: A sample Spring Petclinic application
+  java:
+    groupId: io.github.chains-project
+    version: "17"
+  inceptionYear: "2023"
+
+release:
+  github:
+    owner: cesarsotovalero
+    changelog:
+      formatted: ALWAYS
+      preset: 'gitmoji'
+      format: '- {{commitShortHash}} {{commitTitle}}'
+      contributors:
+        format: '- {{contributorName}} ({{contributorUsernameAsLink}})'
+      hide:
+        contributors:
+          - '[bot]'
+          - 'GitHub'
+files:
+  active: ALWAYS
+  globs:
+    - pattern: target/*.buildinfo
+    - pattern: target/staging-deploy/**/*cyclonedx.json
+signing:
+  active: ALWAYS
+  armored: true
