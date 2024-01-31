@@ -1,6 +1,7 @@
 project:
   name: spring-petclinic
   description: A sample Spring Petclinic application
+  version: 3.2.3
   java:
     groupId: io.github.chains-project
     version: "17"
@@ -22,8 +23,8 @@ release:
 files:
   active: ALWAYS
   globs:
-    - pattern: target/*.buildinfo
-    - pattern: target/staging-deploy/**/*cyclonedx.json
+    - pattern: target/bom.json
+    - pattern: target/**-jar-with-dependencies.jar
 signing:
   active: ALWAYS
   armored: true
